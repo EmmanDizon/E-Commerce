@@ -1,0 +1,581 @@
+{
+	"info": {
+		"_postman_id": "f8e389bd-4edb-45fe-a3d5-b541158773d7",
+		"name": "Ecommerce",
+		"schema": "https://schema.getpostman.com/json/collection/v2.1.0/collection.json"
+	},
+	"item": [
+		{
+			"name": "user",
+			"item": [
+				{
+					"name": "User Information",
+					"request": {
+						"method": "GET",
+						"header": [],
+						"url": {
+							"raw": "http://localhost:4000/api/users/get_profile",
+							"protocol": "http",
+							"host": [
+								"localhost"
+							],
+							"port": "4000",
+							"path": [
+								"api",
+								"users",
+								"get_profile"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "register",
+					"request": {
+						"method": "POST",
+						"header": [],
+						"body": {
+							"mode": "raw",
+							"raw": "{\r\n\t\"name\": \"Geraldine Selga\",\r\n\t\"email\": \"geraldine@gmail.com\",\r\n\t\"password\": \"123456\"\r\n}\r\n",
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
+						},
+						"url": {
+							"raw": "http://localhost:4000/api/users/register",
+							"protocol": "http",
+							"host": [
+								"localhost"
+							],
+							"port": "4000",
+							"path": [
+								"api",
+								"users",
+								"register"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "log in",
+					"request": {
+						"method": "POST",
+						"header": [],
+						"body": {
+							"mode": "raw",
+							"raw": "{\r\n    \"email\": \"emmanjhaydizon@yahoo.com\",\r\n    \"password\": \"123456\"\r\n}",
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
+						},
+						"url": {
+							"raw": "http://localhost:4000/api/users/login",
+							"protocol": "http",
+							"host": [
+								"localhost"
+							],
+							"port": "4000",
+							"path": [
+								"api",
+								"users",
+								"login"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "log out",
+					"request": {
+						"method": "POST",
+						"header": [],
+						"url": {
+							"raw": "http://localhost:4000/api/users/logout",
+							"protocol": "http",
+							"host": [
+								"localhost"
+							],
+							"port": "4000",
+							"path": [
+								"api",
+								"users",
+								"logout"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "forgot password",
+					"request": {
+						"method": "POST",
+						"header": [],
+						"body": {
+							"mode": "raw",
+							"raw": "{\r\n    \"email\":\"emmanjhay@gmail.com\"\r\n}",
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
+						},
+						"url": {
+							"raw": "http://localhost:4000/api/users/forgot_password",
+							"protocol": "http",
+							"host": [
+								"localhost"
+							],
+							"port": "4000",
+							"path": [
+								"api",
+								"users",
+								"forgot_password"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "change password",
+					"request": {
+						"method": "PUT",
+						"header": [],
+						"body": {
+							"mode": "raw",
+							"raw": "{\r\n    \"oldPassword\": \"emman123\",\r\n    \"newPassword\": \"123456\",\r\n    \"confirmPassword\": \"123456\"\r\n}",
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
+						},
+						"url": {
+							"raw": "http://localhost:4000/api/users/change_password",
+							"protocol": "http",
+							"host": [
+								"localhost"
+							],
+							"port": "4000",
+							"path": [
+								"api",
+								"users",
+								"change_password"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "Update profile",
+					"request": {
+						"method": "PUT",
+						"header": [],
+						"body": {
+							"mode": "raw",
+							"raw": "{\r\n    \"name\":\"Emman Jay T. Dizon\"\r\n}",
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
+						},
+						"url": {
+							"raw": "http://localhost:4000/api/users/update_profile",
+							"protocol": "http",
+							"host": [
+								"localhost"
+							],
+							"port": "4000",
+							"path": [
+								"api",
+								"users",
+								"update_profile"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "reset password",
+					"request": {
+						"method": "PUT",
+						"header": [],
+						"body": {
+							"mode": "raw",
+							"raw": "{\r\n    \"password\": \"emman123\",\r\n    \"confirmPassword\": \"emman123\"\r\n}",
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
+						},
+						"url": {
+							"raw": "http://localhost:4000/api/users/reset_password/61d5362eb17d5ae582a6f4e386062734d9334c8b",
+							"protocol": "http",
+							"host": [
+								"localhost"
+							],
+							"port": "4000",
+							"path": [
+								"api",
+								"users",
+								"reset_password",
+								"61d5362eb17d5ae582a6f4e386062734d9334c8b"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "get all users or get user",
+					"request": {
+						"method": "GET",
+						"header": [],
+						"url": {
+							"raw": "http://localhost:4000/api/users/get_user_by_id/61d1a0ff221cc3b2d7ecf9c0",
+							"protocol": "http",
+							"host": [
+								"localhost"
+							],
+							"port": "4000",
+							"path": [
+								"api",
+								"users",
+								"get_user_by_id",
+								"61d1a0ff221cc3b2d7ecf9c0"
+							]
+						}
+					},
+					"response": []
+				}
+			]
+		},
+		{
+			"name": "Product",
+			"item": [
+				{
+					"name": "get all products",
+					"request": {
+						"method": "GET",
+						"header": [],
+						"url": {
+							"raw": "http://localhost:4000/api/products/get_all_data",
+							"protocol": "http",
+							"host": [
+								"localhost"
+							],
+							"port": "4000",
+							"path": [
+								"api",
+								"products",
+								"get_all_data"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "pagination",
+					"request": {
+						"method": "GET",
+						"header": [],
+						"url": {
+							"raw": "http://localhost:4000/api/products/get_all_data?page=1",
+							"protocol": "http",
+							"host": [
+								"localhost"
+							],
+							"port": "4000",
+							"path": [
+								"api",
+								"products",
+								"get_all_data"
+							],
+							"query": [
+								{
+									"key": "page",
+									"value": "1"
+								}
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "create product",
+					"request": {
+						"method": "POST",
+						"header": [],
+						"body": {
+							"mode": "raw",
+							"raw": "    {\r\n        \"name\": \"SanDisk Ultra 128GB SDXC UHS-I Memory Card up to 80MB/s\",\r\n        \"price\": \"45.89\",\r\n        \"description\": \"Ultra-fast cards (2) to take better pictures and full HD videos (1)\",\r\n        \"ratings\":\"4.5\",\r\n        \"images\":[\r\n            {\r\n                \"public_id\": \"products/8194p4lS-3L._AC_SL1500_\",\r\n                \"url\": \"https://m.media-amazon.com/images/I/8194p4lS-3L._AC_SL1500_.jpg\"\r\n            }\r\n        ],\r\n        \"category\":\"Electronics\",\r\n        \"seller\": \"Emman\",\r\n        \"numOfReviews\": 32,\r\n        \"reviews\": []\r\n    }",
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
+						},
+						"url": {
+							"raw": "http://localhost:4000/api/products/new",
+							"protocol": "http",
+							"host": [
+								"localhost"
+							],
+							"port": "4000",
+							"path": [
+								"api",
+								"products",
+								"new"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "get single product",
+					"request": {
+						"method": "GET",
+						"header": [],
+						"url": {
+							"raw": "localhost:4000/api/products/get_data_by_id/61d9a84ae8cf49e7e6a8eada",
+							"host": [
+								"localhost"
+							],
+							"port": "4000",
+							"path": [
+								"api",
+								"products",
+								"get_data_by_id",
+								"61d9a84ae8cf49e7e6a8eada"
+							]
+						}
+					},
+					"response": []
+				}
+			]
+		},
+		{
+			"name": "order",
+			"item": [
+				{
+					"name": "create order",
+					"request": {
+						"method": "POST",
+						"header": [],
+						"body": {
+							"mode": "raw",
+							"raw": "{\r\n    \"itemPrice\": 2.75,\r\n    \"taxPrice\": 0.14,\r\n    \"shippingPrice\": 25,\r\n    \"totalPrice\": 27.89,\r\n    \"orderItems\": [\r\n        {\r\n            \"product\": \"61cdbed6f2b750879f803100\", \r\n            \"name\": \"SanDisk Ultra 128GB SDXC UHS-I Memory Card up to 80MB/s\",\r\n            \"price\": 45.89,\r\n            \"image\": \"https://m.media-amazon.com/images/I/8194p4lS-3L._AC_SL1500_.jpg\",\r\n            \"quantity\": 1\r\n        }\r\n    ],\r\n    \"shippingInfo\": {\r\n        \"address\": \"San jose del monte bulacan\",\r\n        \"city\": \"New York\",\r\n        \"phoneNo\": \"09612953631\",\r\n        \"postalCode\": 3023,\r\n        \"country\": \"Philippines\"\r\n    },\r\n    \"paymentInfo\": {\r\n        \"id\": \"pi_lh3MBNALIMAHMIgvVIoO\",\r\n        \"status\": \"succeed\"\r\n    }\r\n}",
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
+						},
+						"url": {
+							"raw": "http://localhost:4000/api/orders/new",
+							"protocol": "http",
+							"host": [
+								"localhost"
+							],
+							"port": "4000",
+							"path": [
+								"api",
+								"orders",
+								"new"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "get single order",
+					"request": {
+						"method": "GET",
+						"header": [],
+						"url": {
+							"raw": "http://localhost:4000/api/orders/get_data_by_id/61d452308181fad197dcfae2",
+							"protocol": "http",
+							"host": [
+								"localhost"
+							],
+							"port": "4000",
+							"path": [
+								"api",
+								"orders",
+								"get_data_by_id",
+								"61d452308181fad197dcfae2"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "get user order",
+					"request": {
+						"method": "GET",
+						"header": [],
+						"url": {
+							"raw": "http://localhost:4000/api/orders/my_orders",
+							"protocol": "http",
+							"host": [
+								"localhost"
+							],
+							"port": "4000",
+							"path": [
+								"api",
+								"orders",
+								"my_orders"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "get all order",
+					"request": {
+						"method": "GET",
+						"header": [],
+						"url": {
+							"raw": "http://localhost:4000/api/orders/get_all_orders",
+							"protocol": "http",
+							"host": [
+								"localhost"
+							],
+							"port": "4000",
+							"path": [
+								"api",
+								"orders",
+								"get_all_orders"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "process order",
+					"request": {
+						"method": "PUT",
+						"header": [],
+						"body": {
+							"mode": "raw",
+							"raw": "{\r\n    \"status\": \"Delivered\"\r\n}",
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
+						},
+						"url": {
+							"raw": "http://localhost:4000/api/orders/process_order/61d902de7d8a3286aa013313",
+							"protocol": "http",
+							"host": [
+								"localhost"
+							],
+							"port": "4000",
+							"path": [
+								"api",
+								"orders",
+								"process_order",
+								"61d902de7d8a3286aa013313"
+							]
+						}
+					},
+					"response": []
+				}
+			]
+		},
+		{
+			"name": "product review",
+			"item": [
+				{
+					"name": "create review",
+					"request": {
+						"method": "POST",
+						"header": [],
+						"body": {
+							"mode": "raw",
+							"raw": "{\r\n    \"productId\": \"61cdbed6f2b750879f803100\",\r\n    \"userId\": \"61d4580fff36c7de11eb854c\",\r\n    \"name\": \"Emman\",\r\n    \"rating\": 4,\r\n    \"comment\": \"Very Goods !\"\r\n}",
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
+						},
+						"url": {
+							"raw": "http://localhost:4000/api/products/product_review",
+							"protocol": "http",
+							"host": [
+								"localhost"
+							],
+							"port": "4000",
+							"path": [
+								"api",
+								"products",
+								"product_review"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "get product reviews",
+					"request": {
+						"method": "GET",
+						"header": [],
+						"url": {
+							"raw": "http://localhost:4000/api/products/get_product_reviews/61cdbed6f2b750879f803100",
+							"protocol": "http",
+							"host": [
+								"localhost"
+							],
+							"port": "4000",
+							"path": [
+								"api",
+								"products",
+								"get_product_reviews",
+								"61cdbed6f2b750879f803100"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "delete reviews",
+					"request": {
+						"method": "DELETE",
+						"header": [],
+						"url": {
+							"raw": "http://localhost:4000/api/products/delete_review?productid=61cdbed6f2b750879f803100&id=61d9039d7d8a3286aa013339",
+							"protocol": "http",
+							"host": [
+								"localhost"
+							],
+							"port": "4000",
+							"path": [
+								"api",
+								"products",
+								"delete_review"
+							],
+							"query": [
+								{
+									"key": "productid",
+									"value": "61cdbed6f2b750879f803100"
+								},
+								{
+									"key": "id",
+									"value": "61d9039d7d8a3286aa013339"
+								}
+							]
+						}
+					},
+					"response": []
+				}
+			]
+		}
+	]
+}
